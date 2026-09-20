@@ -1,0 +1,7 @@
+package DesignPatterns.SystemDesign.ATMMachine.States;
+
+public enum TransactionType {
+    WITHDRAW_CASH,
+    CHECK_BALANCE;
+
+}
