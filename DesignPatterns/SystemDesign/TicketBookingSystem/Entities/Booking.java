@@ -51,12 +51,13 @@ public class Booking {
         return bookingStatus;
     }
 
-    public Booking(int id, Show show, List<Seat> seatsBooked, User user, BookingStatus bookingStatus) {
+    public Booking(int id, Show show, List<Seat> seatsBooked, User user) {
         this.id = id;
         this.show = show;
         this.seatsBooked = seatsBooked;
         this.user = user;
-        this.bookingStatus = bookingStatus;
+        this.bookingStatus = BookingStatus.CREATED;
+        ;
     }
 
 }

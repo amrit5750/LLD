@@ -1,5 +1,6 @@
 package DesignPatterns.SystemDesign.TicketBookingSystem.Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Theatre {
@@ -20,10 +21,14 @@ public class Theatre {
         return screens;
     }
 
-    public Theatre(int id, String name, List<Screen> screens) {
+    public Theatre(int id, String theatreName) {
         this.id = id;
-        this.name = name;
-        this.screens = screens;
+        this.name = theatreName;
+        this.screens = new ArrayList<>();
+    }
+
+    public void addScreen(final Screen screen) {
+        screens.add(screen);
     }
 
 }

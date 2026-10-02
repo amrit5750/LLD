@@ -1,5 +1,6 @@
 package DesignPatterns.SystemDesign.TicketBookingSystem.Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Screen {
@@ -9,11 +10,11 @@ public class Screen {
     private final Theatre thratre;
     private List<Seat> seats;
 
-    public Screen(int screenId, String name, Theatre thratre, List<Seat> seats) {
+    public Screen(int screenId, String name, Theatre thratre) {
         this.screenId = screenId;
         this.name = name;
         this.thratre = thratre;
-        this.seats = seats;
+        this.seats = new ArrayList<>();
     }
 
     public int getScreenId() {
@@ -30,6 +31,10 @@ public class Screen {
 
     public List<Seat> getSeats() {
         return seats;
+    }
+
+    public void addSeat(final Seat seat) {
+        this.seats.add(seat);
     }
 
 }
